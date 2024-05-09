@@ -4,3 +4,10 @@ MotionBERT requires AlphaPose installation/build, which has been documented in (
 But be aware that it needs to be installed in a lower python version (python3.8 I am using) under a conda/miniconda env.
 
 Be careful with chumpy, which is one of the library it depends on. It may have a numpy cannot import bool issue, for numpy>=1.24. use pip install git+https://github.com/mattloper/chumpy
+
+# Usage:
+
+python infer_wild.py --vid_path /datasets/work/hb-c-radiation/work/Python_env/miniconda3/envs/MotionBERT_conda_env/AlphaPose/scripts/my_activity_short.mp4 --json_path /datasets/work/hb-c-radiation/work/Python_env/miniconda3/envs/MotionBERT_conda_env/AlphaPose/examples/res/alphapose-results.json --out_path results/
+
+python infer_wild_mesh.py --vid_path /datasets/work/hb-c-radiation/work/Python_env/miniconda3/envs/MotionBERT_conda_env/AlphaPose/scripts/my_activity_short.mp4 --json_path /datasets/work/hb-c-radiation/work/Python_env/miniconda3/envs/MotionBERT_conda_env/AlphaPose/examples/res/alphapose-results.json --out_path results/ --ref_3d_motion_path results/X3D.npy
+
